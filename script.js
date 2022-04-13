@@ -39,7 +39,6 @@ window.addEventListener("keydown", function(e) {
                             handle: ""
                           })
                           }, 4000)
-                    })
                     break;
             }
         }
