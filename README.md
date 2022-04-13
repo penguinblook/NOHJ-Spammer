@@ -5,4 +5,4 @@ A simple spam GUI for [penguinpowers](https://github.com/penguinblook)'s [NOHJ](
 1. Open the console (CTRL + SHIFT + J)<br>
 2. Paste the script in (CTRL + V)<br>
 3. Press enter
-4. Press '\\' to open the GUI
+4. Press ' \\' to open the GUI
