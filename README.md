@@ -1,5 +1,5 @@
 # NOHJ Spammer/Tool
-A simple spam GUI for [NOHJ](https://eez.penguinpowers.repl.co/)
+A simple spam GUI for [penguinpowers](https://github.com/penguinblook)'s [NOHJ](https://eez.penguinpowers.repl.co/)
 
 # How to use
 1. Open the console (CTRL + SHIFT + J)<br>
