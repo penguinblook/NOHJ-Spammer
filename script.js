@@ -20,10 +20,13 @@ window.addEventListener("keydown", function(e) {
                         }
                     })
                     let spamint = setInterval(() => {
+                          if (socket.disconnected) {
+                                socket.connect()
+                          }
                           socket.emit('chat message', {
                             message: window.message,
                             user: window.userraw
-                          })
+                          }, 50)
                     });
                     break;
                 case 2:
