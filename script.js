@@ -20,25 +20,25 @@ window.addEventListener("keydown", function(e) {
                         }
                     })
                     let spamint = setInterval(() => {
-                          socket.emit('chat', {
+                          socket.emit('chat message', {
                             message: window.message,
-                            handle: window.userraw
+                            user: window.userraw
                           })
                     });
                     break;
                 case 2:
-                    handle = prompt("What would you like your username to be?")
+                    name = prompt("What would you like your username to be?")
                     break;
                 case 3:
                     //if (confirm("Would you like to stop any lag client-sided for you?") {
                     //            
                     //}
                     setInterval(() => {
-                          socket.emit('chat', {
-                            message: `<text style='font-size:500000rem'></text>`,
-                            handle: ""
+                          socket.emit('chat message', {
+                            message: `<text style='font-size:500000rem;background-color:black;'></text>`,
+                            user: ""
                           })
-                          }, 4000)
+                          }, 1000)
                     break;
             }
         }
