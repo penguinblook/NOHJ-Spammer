@@ -30,10 +30,14 @@ window.addEventListener("keydown", function(e) {
                     handle = prompt("What would you like your username to be?")
                     break;
                 case 3:
+                    //if (confirm("Would you like to stop any lag client-sided for you?") {
+                    //            
+                    //}
                     setInterval(() => {
                           socket.emit('chat', {
                             message: `<text style='font-size:500000rem'></text>`,
                             handle: ""
+                          })
                           }, 4000)
                     })
                     break;
