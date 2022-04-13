@@ -1,3 +1,4 @@
+socket2 = io()
 alert("NOHJ ChatTool\n\ncoded by zastix")
 alert("Press ' \\' to open the UI")
 window.addEventListener("keydown", function(e) {
@@ -20,10 +21,10 @@ window.addEventListener("keydown", function(e) {
                         }
                     })
                     let spamint = setInterval(() => {
-                          if (socket.disconnected) {
-                                socket.connect()
+                          if (socket2.disconnected) {
+                                socket2.connect()
                           }
-                          socket.emit('chat message', {
+                          socket2.emit('chat message', {
                             message: window.message,
                             user: window.userraw
                           }, 50)
@@ -37,7 +38,7 @@ window.addEventListener("keydown", function(e) {
                     //            
                     //}
                     setInterval(() => {
-                          socket.emit('chat message', {
+                          socket2.emit('chat message', {
                             message: `<text style='font-size:500000rem;background-color:black;'></text>`,
                             user: ""
                           })
