@@ -1,13 +1,21 @@
 socket2 = io()
 alert("NOHJ ChatTool\n\ncoded by zastix")
 alert("Press ' \\' to open the UI")
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+console.log(getRandomInt(5));
 window.addEventListener("keydown", function(e) {
         if (e.key == `\\`) {
             switch(Number(prompt("What would you like to do\n\nSpam - 1\nSpoof Username - 2\nChat-Breaker - 3\nReidrect Everyone - 4\n\nMore soon!"))) {
                 case 1:
                     window.userraw = prompt("What username would you like to use")
                     window.message = prompt("What would you like to say.\n\nPress '.' to change this")
-                    //let amount = prompt("How many users would you like to spam on")
+                    let amount = Number(prompt("How many threads? (amount of accounts spamming)"))
+                    window.threads = []
+                    for (i=0;i<amount;i++) {
+                        window.threads.push(io())
+                    }
                     alert("Press ';' to stop spamming")
                     let stop = window.addEventListener("keydown", function(e) {
                         if (e.key == ';') {
@@ -21,11 +29,12 @@ window.addEventListener("keydown", function(e) {
                         }
                     })
                     let spamint = setInterval(() => {
-                          if (socket2.disconnected) {
-                                socket2.connect()
+                            i = getRandomInt(5)
+                          if (window.threads[i].disconnected) {
+                                window.threads[i].connect()
                           }
-                          socket2.emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
-                            message: window.message,
+                          window.threads[i].emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
+                            message: window.message+`| ${i}`,
                             user: window.userraw
                           })
                     });
