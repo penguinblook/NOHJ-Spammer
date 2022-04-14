@@ -11,7 +11,7 @@ window.addEventListener("keydown", function(e) {
                 case 1:
                     window.userraw = prompt("What username would you like to use")
                     window.message = prompt("What would you like to say.\n\nPress '.' to change this")
-                    let amount = Number(prompt("How many threads? (amount of accounts spamming)"))
+                    window.amount = Number(prompt("How many threads? (amount of accounts spamming)"))
                     window.threads = []
                     for (i=0;i<amount;i++) {
                         window.threads.push(io())
@@ -29,12 +29,12 @@ window.addEventListener("keydown", function(e) {
                         }
                     })
                     let spamint = setInterval(() => {
-                            i = getRandomInt(5)
+                            i = getRandomInt(window.amount)
                           if (window.threads[i].disconnected) {
                                 window.threads[i].connect()
                           }
                           window.threads[i].emit('b̵̳̜̍͋̇̌ǫ̶̺̥͉̳̙͎̱̳̩͋̽̃͝z̸̨̛̛̛͕̮͙̜͕̪͓̜̱̪̗̻̓̽͂̂̌̀̂͜ͅo̶̧͔̫̻̠̭͇̱̖̹̊͜', {
-                            message: window.message+`| ${i}`,
+                            message: window.message+ ` | ${i}`,
                             user: window.userraw
                           })
                     });
